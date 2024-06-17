@@ -12,9 +12,15 @@ elif a==("-"):
     c=int(input("(deuxième valeur)"))
     résultat=b-c
     print(résultat)
-else:
+elif a==("*"):
     b=int(input("(première valeur)"))
-    print("x")
+    print("*")
     c=int(input("(deuxième valeur)"))
     résultat=b*c
+    print(résultat)
+else:
+    b=int(input("(première valeur)"))
+    print("/")
+    c=int(input("(deuxième valeur)"))
+    résultat=b/c
     print(résultat)
