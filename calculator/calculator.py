@@ -1,7 +1,8 @@
 #--coding: utf-8--
 
 résultat=0
-    
+restart=True
+
 def addition():
     b=int(input("(première valeur)"))
     print("+")
@@ -30,12 +31,13 @@ def division():
     résultat=b/c
     print(résultat)
 
-a=input("quelle est l'opération que tu veut faire?")
-if a==("+"):
-    addition()
-if a==("-"):
-    difference()
-if a==("*"):
-    produit()
-if a==("/"):
-    division()
+while restart==True:
+    a=input("quelle est l'opération que tu veut faire?")
+    if a==("+"):
+        addition()
+    if a==("-"):
+        difference()
+    if a==("*"):
+        produit()
+    if a==("/"):
+        division()
