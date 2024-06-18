@@ -1,3 +1,5 @@
+--coding: utf-8--
+
 résultat=0
     
 def addition():
