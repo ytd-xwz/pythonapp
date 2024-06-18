@@ -1,26 +1,39 @@
 résultat=0
-a=input("quelle est l'opération que tu veut faire?")
-if a==("+"):
+    
+def addition():
     b=int(input("(première valeur)"))
     print("+")
     c=int(input("(deuxième valeur)"))
     résultat=b+c
     print(résultat)
-elif a==("-"):
+
+def difference():
     b=int(input("(première valeur)"))
     print("-")
     c=int(input("(deuxième valeur)"))
     résultat=b-c
     print(résultat)
-elif a==("*"):
+
+def produit():
     b=int(input("(première valeur)"))
     print("*")
     c=int(input("(deuxième valeur)"))
     résultat=b*c
     print(résultat)
-else:
+
+def division():
     b=int(input("(première valeur)"))
     print("/")
     c=int(input("(deuxième valeur)"))
     résultat=b/c
     print(résultat)
+
+a=input("quelle est l'opération que tu veut faire?")
+if a==("+"):
+    addition()
+if a==("-"):
+    difference()
+if a==("*"):
+    produit()
+if a==("/"):
+    division()
