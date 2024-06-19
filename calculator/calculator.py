@@ -1,3 +1,5 @@
+#--coding: utf-8--
+
 import tkinter as tk
 field_text = ""
 def add_to_field_text():
@@ -54,20 +56,20 @@ btn_0.grid(row=5, column=1)
 
 #boutons d'opération
 
-btn_plus=tk.Button(window, text="+" command=lambda:add_to_field(+), width=5, font=("New Times Roman", 14"))
+btn_plus=tk.Button(window, text="+" command=lambda:add_to_field(+), width=5, font=("New Times Roman", 14))
 btn_plus.grid(row=5, column=4)
 
-btn_moins=tk.Button(window, text="-" command=lambda:add_to_field(-), width=5, font=("New Times Roman", 14"))
+btn_moins=tk.Button(window, text="-" command=lambda:add_to_field(-), width=5, font=("New Times Roman", 14))
 btn_moins.grid(row=5, column=4)
 
-btn_fois=tk.Button(window, text="x" command=lambda:add_to_field(x), width=5, font=("New Times Roman", 14"))
+btn_fois=tk.Button(window, text="x" command=lambda:add_to_field(x), width=5, font=("New Times Roman", 14))
 btn_fois.grid(row=3, column=4)
 
-btn_div=tk.Button(window, text="/" command=lambda:add_to_field(/), width=5, font=("New Times Roman", 14"))
+btn_div=tk.Button(window, text="/" command=lambda:add_to_field(/), width=5, font=("New Times Roman", 14))
 btn_div.grid(row=2, column=4)
 
-btn_clear=tk.Button(window, text="clear" command=lambda:clear(), width=5, font=("New Times Roman", 14"))
+btn_clear=tk.Button(window, text="clear" command=lambda:clear(), width=5, font=("New Times Roman", 14))
 btn_clear.grid(row=5, column=3)
 
-btn_calc=tk.Button(window, text="/" command=lambda:calculate(), width=13, font=("New Times Roman", 14"))
+btn_calc=tk.Button(window, text="/" command=lambda:calculate(), width=13, font=("New Times Roman", 14))
 btn_calc.grid(row=6, column=3, columnspan=2)
