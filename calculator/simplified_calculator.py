@@ -5,6 +5,6 @@ def calculate(a):
     return b
     
 
-a = input("enter")
+a =input("enter\n")
 result = calculate(a)
 print(result)
