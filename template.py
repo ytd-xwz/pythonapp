@@ -75,7 +75,20 @@ def Function(distance, temps, sensors, startIdx=0, path=None):
     return mean, fileDes, vars
 
 
-def FindCommonRoots(polynom1, polynom2, resolution=0.01, method="Fibonacci")
+def FindCommonRoots(polynom1, polynom2, resolution=0.01, method="Fibonacci"):
+    """
+    @brief    function that should calculate the roots of two given polynoms
+
+    @param      polynom1    First referenced polynomial
+    @param      polynom2    Second referenced polynomial
+    @param      resolution  Parameter to define the resolution of the calculated roots.
+    @param      method      Specifies the method to use for the calculation.
+
+    @return     Returns a tuple of the found roots.
+
+    @warning    This function is still not implemented
+    """
+    pass
 
 
 
