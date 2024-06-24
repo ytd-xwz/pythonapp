@@ -96,6 +96,7 @@ if __name__ == "__main__":
     # Called only when this module is run as a script
     # Do the main work or embeds unit tests.
 
+    # created variables
     poly1 = (1,4,2)
     poly2 = (2,1,2)
 
