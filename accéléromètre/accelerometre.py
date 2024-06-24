@@ -1,6 +1,6 @@
 # -*- coding:utf-8 -*-
 '''!
-   @file get_acceleration.py
+   @file accelerometre.py
    @brief Get the acceleration in x, y, and z directions, the mearsurement range is ±2g, ±4g, ±8g or ±16g, set by the setRange() function
    @n In this example, the continuous measurement mode is selected by default -- the acceleration data will be measured continuously according to the measuring rate.
    @n You can also use the single data conversion on demand mode 1. You need to select a suitable conversion mode in the setPowerMode() function                 
@@ -13,6 +13,12 @@
    @version  V1.0
    @date  2021-01-16
    @url https://github.com/DFRobot/DFRobot_LIS
+
+   @current version:
+   @file       template.py
+   @copyright  InSolem SARL reserves all rights even in the event of industrial
+              property rights. We reserve all rights of disposal such as
+              copying and passing on to third parties.
 '''
 
 import sys
