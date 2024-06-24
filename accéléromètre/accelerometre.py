@@ -42,6 +42,10 @@ acce = DFRobot_LIS2DW12_I2C(I2C_BUS ,ADDRESS_1)
 
 # starts init
 def init():
+  """
+    initialize chip and i2c
+    at end the reset the sensor
+  """
   #Chip initialization
   acce.begin()
   #Get chip id
@@ -52,6 +56,9 @@ def init():
 
 # start config
 def config():
+  """
+    configure the accelerometre sensor by default
+  """
   '''
     Set the sensor measurement range:
                 RANGE_2G     #±2g
@@ -123,6 +130,9 @@ time.sleep(0.1)
 
 # main loop
 def main_loop():
+  """
+    read the different values every 0.3 seconds
+  """
   while True:
       #Request a measurement under single data conversion on demand mode.
       #acce.demand_data()
