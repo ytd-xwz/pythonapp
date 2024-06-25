@@ -1,3 +1,6 @@
 calculator/venvcalc/
 accéléromètre/venv_accelerometre/
 UART/venv_UART/
+graph/venv_graph/pyvenv.cfg
+graph/venv_graph/Lib/site-packages/numpy-2.0.0-cp312-cp312-win_amd64.whl
+graph/venv_graph/
