@@ -3,8 +3,6 @@ import time
 import numpy as np                                              # import the numpy library and rename it np
 from matplotlib import pyplot as plt                            # import from the matplotlib library the fonction pyplot and rename it plt
 from mpl_toolkits.mplot3d import Axes3D
-from matplotlib.animation import FuncAnimation
-import random
 
 ser_port = None
 ax = None
@@ -13,9 +11,12 @@ fig = None
 
 def init_uart():
     global ser_port
-    ser_port  =  serial.Serial(port  =  "COM3" , baudrate = 9600 , timeout = 2 )
+    ser_port  =  serial.Serial(port  =  "COM3" , baudrate = 9600 , timeout = 1 )
     if  (ser_port.isOpen()  ==  False):
         ser_port. open ()                                       # check and open Serial0
+
+    ser_port.flushInput()                                       # clear the UART Input buffer
+    ser_port.flushOutput()                                      # clear the UART output buffer   
 
 def init_graph():
     global ax
@@ -25,9 +26,9 @@ def init_graph():
     fig = plt.figure()                                          # Creating an empty figure or plot
     ax = fig.add_subplot(111, projection='3d')
     #Set plot limits
-    ax.set_xlim([-10, 10])
-    ax.set_ylim([-10, 10])
-    ax.set_zlim([-10, 10])
+    ax.set_xlim([-5000, 5000])
+    ax.set_ylim([-5000, 5000])
+    ax.set_zlim([-5000, 5000])
 
     #Labels
     ax.set_xlabel('X')
@@ -38,13 +39,16 @@ def init_graph():
     quiver = ax.quiver(0, 0, 0, 0, 0, 0)
     
 def read_uart():
-    global ser_port
-    ser_port.flushInput()                                       # clear the UART Input buffer
-    ser_port.flushOutput()                                      # clear the UART output buffer                           
+    global ser_port                        
     bs = ser_port.readline().decode('utf-8').strip()
     print(repr(bs))
 
     return bs
+
+def destroy():
+    global ser_port
+    ser_port.close ()                                          # Closes the serial port
+    print ("test complete")
 
 def parse_accel(txt):
     a = txt.split()
@@ -78,5 +82,8 @@ if __name__ == "__main__":
             texto = read_uart()
             (x , y , z) = parse_accel(texto)
             update_graph(x , y , z)
+        except KeyboardInterrupt:                              # Watches for Ctrl-C
+            destroy() 
+            break    
         except:
             pass
