@@ -37,6 +37,9 @@ def parse(txt):
 
     return(x, y, z)
 
+def graph():
+    
+
 if __name__ == '__main__':                                 # Program entry point
     try:
         echotest()                                         # call echotest function
