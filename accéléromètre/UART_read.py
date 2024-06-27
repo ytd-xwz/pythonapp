@@ -15,10 +15,27 @@ def echotest():
         time.sleep(0.1)                            
         bs = ser.readline().decode('utf-8').strip()
         print(repr(bs))
+        vector = parse(bs)
+        print(vector)
 
 def destroy():
     ser.close ()                                          # Closes the serial port
     print ("test complete")
+
+def parse(txt):
+    """
+    @brief receives a three numbers into a string to get 3 nuöbers
+
+    @param txt
+    """
+
+    a = txt.split()
+
+    x = int((a[0]))
+    y = int((a[1]))
+    z = int((a[2]))
+
+    return(x, y, z)
 
 if __name__ == '__main__':                                 # Program entry point
     try:
